@@ -1,2 +1,2 @@
-# timeing-the-market
+# timing-the-market
 Should I sell now?
