@@ -83,7 +83,7 @@ var chart = new Chart(canvas, {
     options: options
 });
 
-setTimeout(function () {
+setInterval(function () {
     if (gameRunning) {
         daysElapsed++;
         add_new_market_value();
