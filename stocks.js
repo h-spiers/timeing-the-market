@@ -12,7 +12,7 @@ function add_new_market_value() {
         var marketChange = 1 + marketGainOrLoss; //market gains value
     }
     dailyValues.push(Math.floor(prevValue * marketChange)); //adds new market value to graph
-    if (playerInMarket == true) { //SHOULD only change investment value if player hasn't sold
+    if (playerInMarket == true) { //only changes investment value if player hasn't sold
         investmentValue = investmentValue * marketChange;
     }
     document.getElementById('investmentValueLabel').innerHTML = 'Investment value: ' + investmentValue.toFixed(2);
@@ -30,7 +30,7 @@ function startStop() { //starts and stops simulation
     }
 }
 
-function buy() { //SHOULD make investment value stop changing
+function buy() { //makes investment value stop changing
     playerInMarket = true;
     investmentValue = investmentValue - 12.5 //simulates broker fees
 }
@@ -39,6 +39,7 @@ function sell() { //SHOULD resume investment value changing
     investmentValue = investmentValue - 12.5 //simulates broker fees
 }
 
+//initialise values used in graph
 var daysElapsed = 1;
 var dailyValues = [10000];
 var investmentValue = 10000;
